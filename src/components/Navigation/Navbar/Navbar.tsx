@@ -3,13 +3,13 @@ import {
   Button,
   Container,
   Flex,
-  Heading,
   HStack,
-  Icon,
   IconButton,
 } from '@chakra-ui/react';
 import { FC } from 'react';
 import { FaBars } from 'react-icons/fa';
+
+import Logo from '~/components/Logo/Logo';
 interface NavbarProps {
   routes: {
     name: string;
@@ -28,12 +28,7 @@ const Navbar: FC<NavbarProps> = ({ routes }) => {
         alignItems="center"
       >
         {/* Brand */}
-        <HStack>
-          <Box bg="white" borderRadius="full" boxSize="50px"></Box>
-          <Heading as="h3" fontSize="xl" fontWeight="400">
-            Devmanlabs
-          </Heading>
-        </HStack>
+        <Logo />
         <IconButton
           display={{ base: 'flex', md: 'none' }}
           justifyContent="center"
