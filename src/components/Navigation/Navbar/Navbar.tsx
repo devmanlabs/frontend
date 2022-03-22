@@ -5,9 +5,11 @@ import {
   Flex,
   Heading,
   HStack,
+  Icon,
+  IconButton,
 } from '@chakra-ui/react';
 import { FC } from 'react';
-
+import { FaBars } from 'react-icons/fa';
 interface NavbarProps {
   routes: {
     name: string;
@@ -32,7 +34,16 @@ const Navbar: FC<NavbarProps> = ({ routes }) => {
             Devmanlabs
           </Heading>
         </HStack>
-        <HStack spacing="4">
+        <IconButton
+          display={{ base: 'flex', md: 'none' }}
+          justifyContent="center"
+          aria-label="drawer-btn"
+          variant="unstyled"
+          fontSize="3xl"
+        >
+          <FaBars />
+        </IconButton>
+        <HStack spacing="4" display={{ base: 'none', md: 'flex' }}>
           <Flex gap="4">
             {routes.map((route) => (
               <Box
