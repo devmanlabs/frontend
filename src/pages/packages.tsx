@@ -1,4 +1,4 @@
-import { Container, Grid, Heading, Text } from '@chakra-ui/react';
+import { Container, Grid, Heading, Text, VStack } from '@chakra-ui/react';
 import { BsCurrencyDollar } from 'react-icons/bs';
 
 import PackageCard from '~/components/PackageCard';
@@ -120,14 +120,38 @@ const packages = () => {
 
   return (
     <Container maxW="container.xl">
-      <Heading>Choose a Tier to Gain Access to our Tools and Start</Heading>
-      <Text>Earning Rewards</Text>
+      <Heading
+        my="4"
+        as="h1"
+        fontSize={{ base: 'xl', md: '3xl' }}
+        textAlign="center"
+      >
+        Choose a Tier to Gain Access to our Tools and Start
+      </Heading>
+      <Text
+        my="2"
+        mb="8"
+        fontSize={{ base: '2xl', md: '4xl' }}
+        textAlign="center"
+      >
+        Earning Rewards
+      </Text>
 
       <Grid gridTemplateColumns="repeat(auto-fit,minmax(250px,1fr))" gap="4">
         {packagesList.map((item, i) => (
           <PackageCard index={i} item={item} key={item.name} />
         ))}
       </Grid>
+      <VStack color="gray.200">
+        <Heading mt="6" fontSize="md" as="h4">
+          Need Help? Check Out Our FAQ
+        </Heading>
+        <Text textAlign="center" fontSize="sm">
+          *Cost are denominated in USD , and access is stored as staked amount{' '}
+          <br /> in the price are subject to a DAO Governance Vote. Depending on
+          the amount <br /> staked staking rewards may exceed monthly costs.
+        </Text>
+      </VStack>
     </Container>
   );
 };

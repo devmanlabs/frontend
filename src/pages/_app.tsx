@@ -3,13 +3,13 @@ import type { AppProps } from 'next/app';
 
 import 'pure-react-carousel/dist/react-carousel.es.css'; // requires a loader
 // import Footer from '~/components/Footer/Footer';
-import Navigation from '~/components/Navigation/Navigation';
+// import Navigation from '~/components/Navigation/Navigation';
 import theme from '~/theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Navigation />
+      {/* <Navigation /> */}
       <Component {...pageProps} />
       {/* <Footer /> */}
     </ChakraProvider>
