@@ -31,8 +31,10 @@ const PackageCard: FC<PackageCardProps> = ({ item, index }) => {
         transition="0.3s ease"
         py={4}
         px="4"
+        bg={item.name === 'Unlimited' ? 'red.500' : 'white'}
+        color={item.name === 'Unlimited' ? 'white' : 'black'}
         _groupHover={{
-          bg: 'pink.500',
+          bg: 'red.500',
           color: 'white',
         }}
       >
@@ -51,7 +53,7 @@ const PackageCard: FC<PackageCardProps> = ({ item, index }) => {
                 {benefit.icon}
               </Icon>
               <Text
-                color={!benefit.access ? 'gray.200' : 'purple.700'}
+                color={!benefit.access ? 'gray.200' : 'black'}
                 fontSize="sm"
               >
                 {benefit.text}
@@ -61,11 +63,12 @@ const PackageCard: FC<PackageCardProps> = ({ item, index }) => {
         </Stack>
         <Button
           transition="0.3s ease"
-          _hover={{ opacity: 0.8 }}
           _groupHover={{
-            bg: 'pink.500',
+            bg: 'red.500',
             color: 'white',
           }}
+          bg={item.name === 'Unlimited' ? 'red.500' : 'white'}
+          color={item.name === 'Unlimited' ? 'white' : 'purple'}
           variant="outline"
           w="80%"
         >
