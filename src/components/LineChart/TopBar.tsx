@@ -21,7 +21,9 @@ const TopBar: FC<TopBarProps> = ({ downloadData, toggleZoom }) => {
       justify="space-between"
       border="1px solid #000"
     >
-      <Heading fontSize="lg">Liquidty Coverage Ratio (LCR)</Heading>
+      <Heading fontSize={{ base: 'md', sm: 'lg' }}>
+        Liquidty Coverage Ratio (LCR)
+      </Heading>
       <HStack fontSize="2xl">
         <CSVDownloader data={downloadData}>
           <GrDocumentDownload />

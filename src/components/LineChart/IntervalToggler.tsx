@@ -11,24 +11,29 @@ const IntervalToggler: FC<IntervalTogglerProps> = ({
   changeIntervalHandler,
 }) => {
   return (
-    <Flex justify="space-between" p="4">
-      <Flex gap={4}>
+    <Flex
+      justify="space-between"
+      p={{ base: 2, sm: 4 }}
+      flexDir={{ base: 'column-reverse', sm: 'row' }}
+    >
+      <Flex gap={{ base: 2, sm: 4 }}>
         <VStack spacing={0}>
-          <Text fontSize="sm">AAVE v2 </Text>
-          <Text fontWeight="bold" fontSize="xl">
+          <Text fontSize={{ base: 'x-small', sm: 'sm' }}>AAVE v2 </Text>
+          <Text fontWeight="bold" fontSize={{ base: 'sm', sm: 'xl' }}>
             22.4%
           </Text>
         </VStack>
         <VStack spacing={0}>
-          <Text fontSize="sm">Compound </Text>
-          <Text fontWeight="bold" fontSize="xl">
+          <Text fontSize={{ base: 'x-small', sm: 'sm' }}>Compound </Text>
+          <Text fontWeight="bold" fontSize={{ base: 'sm', sm: 'xl' }}>
             33.24%
           </Text>
         </VStack>
       </Flex>
-      <Flex gap={4}>
+      <Flex gap={{ base: 1, sm: 2, md: 4 }}>
         {[30, 60, 90].map((days) => (
           <Box
+            fontSize={{ base: 'sm', sm: 'xl' }}
             fontWeight={dayInterval === days ? 'bold' : 'normal'}
             key={days}
             onClick={() => changeIntervalHandler(days)}

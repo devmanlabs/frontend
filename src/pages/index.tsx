@@ -46,7 +46,7 @@ const Home = () => {
               <MembershipDetailsCard />
             </GridItem>
             <GridItem colSpan={{ sm: 5, lg: 7 }} rowSpan={{ sm: 4, lg: 5 }}>
-              <Card>
+              <Card w="99%">
                 <LineChartPreview />
               </Card>
             </GridItem>

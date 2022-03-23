@@ -180,6 +180,7 @@ const LineChartPreview = () => {
                 <Line
                   options={{
                     maintainAspectRatio: false,
+                    resizeDelay: 100,
                     scales: {
                       x: {
                         grid: {
@@ -192,12 +193,6 @@ const LineChartPreview = () => {
 
                           unit: 'day',
                           stepSize: 7,
-
-                          // displayFormats: {
-                          //   day: "dd",
-                          //   month: "MMM",
-                          //   year: "yyyy",
-                          // },
                         },
                         adapters: {
                           date: {
