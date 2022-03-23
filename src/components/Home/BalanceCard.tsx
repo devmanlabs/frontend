@@ -11,6 +11,7 @@ const BalanceCard: FC<BalanceCardProps> = () => {
       <Flex
         h="100%"
         justify="space-between"
+        gap={4}
         flexDirection={{ base: 'column-reverse', sm: 'row' }}
       >
         <Stack
@@ -28,11 +29,7 @@ const BalanceCard: FC<BalanceCardProps> = () => {
               Minted on 02 Feb 2022
             </Text>
           </Stack>
-          <Flex
-            flexDir={{ base: 'column', md: 'row' }}
-            justify="space-between"
-            gap="2"
-          >
+          <Flex flexDir={{ base: 'column', md: 'row' }} gap="2">
             <Button
               fontSize="sm"
               fontWeight="400"
@@ -58,7 +55,11 @@ const BalanceCard: FC<BalanceCardProps> = () => {
           <Text fontSize="sm" color="gray.500">
             Current Balance
           </Text>
-          <Text fontSize={{ base: '5xl', sm: '3xl' }} color="gray.500">
+          <Text
+            fontSize={{ base: '5xl', sm: '3xl' }}
+            fontWeight="600"
+            color="gray.800"
+          >
             40,783
           </Text>
           <Text fontSize="sm" color="gray.500">

@@ -1,16 +1,19 @@
 import {
-  Button,
   Flex,
   Grid,
   GridItem,
-  Heading,
+  Icon,
   Stack,
   Text,
   VStack,
 } from '@chakra-ui/react';
+import { BsInfoCircle } from 'react-icons/bs';
 
 import { Card } from '~/components/Card';
 import BalanceCard from '~/components/Home/BalanceCard';
+import MembershipDetailsCard from '~/components/Home/MembershipDetailsCard';
+import RemainingDaysCard from '~/components/Home/RemainingDaysCard';
+import RewardCard from '~/components/Home/RewardCard';
 
 const Home = () => {
   return (
@@ -41,20 +44,14 @@ const Home = () => {
               <BalanceCard />
             </GridItem>
             <GridItem colSpan={{ sm: 4, lg: 2 }} rowSpan={{ sm: 2, lg: 2 }}>
-              <Card>
-                <Grid>hi</Grid>
-              </Card>
+              <RewardCard />
             </GridItem>
             <GridItem colSpan={{ sm: 4, lg: 2 }} rowSpan={{ sm: 2, lg: 2 }}>
-              <Card>
-                <Grid>hi</Grid>
-              </Card>
+              <RemainingDaysCard />
             </GridItem>
 
             <GridItem colSpan={{ sm: 3, lg: 2 }} rowSpan={{ sm: 4, lg: 5 }}>
-              <Card>
-                <Grid>hi</Grid>
-              </Card>
+              <MembershipDetailsCard />
             </GridItem>
             <GridItem colSpan={{ sm: 5, lg: 7 }} rowSpan={{ sm: 4, lg: 5 }}>
               <Card>
