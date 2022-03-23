@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Container,
-  Flex,
-  HStack,
-  IconButton,
-} from '@chakra-ui/react';
+import { Box, Button, Container, Flex, HStack, Icon } from '@chakra-ui/react';
 import { FC } from 'react';
 import { FaBars } from 'react-icons/fa';
 
@@ -15,29 +8,33 @@ interface NavbarProps {
     name: string;
     link: string;
   }[];
+  onToggle: () => void;
 }
 
-const Navbar: FC<NavbarProps> = ({ routes }) => {
+const Navbar: FC<NavbarProps> = ({ routes, onToggle }) => {
   return (
     <Box as="nav" bg="purple.500" color="white">
       <Container
         h="70px"
-        maxW="container.xl"
+        maxW="100%"
         display="flex"
         justifyContent="space-between"
         alignItems="center"
       >
         {/* Brand */}
-        <Logo />
-        <IconButton
-          display={{ base: 'flex', md: 'none' }}
-          justifyContent="center"
-          aria-label="drawer-btn"
-          variant="unstyled"
-          fontSize="3xl"
-        >
-          <FaBars />
-        </IconButton>
+        <HStack>
+          <Icon
+            onClick={onToggle}
+            boxSize="30px"
+            justifyContent="center"
+            aria-label="drawer-btn"
+            fontSize="xl"
+          >
+            <FaBars />
+          </Icon>
+          <Logo />
+        </HStack>
+
         <HStack spacing="4" display={{ base: 'none', md: 'flex' }}>
           <Flex gap="4">
             {routes.map((route) => (

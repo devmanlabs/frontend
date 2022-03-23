@@ -220,7 +220,6 @@ const LineChartPreview = () => {
           </Stack>
         </Stack>
       </Container>
-      {/* <ChartsCarousel /> */}
     </>
   );
 };

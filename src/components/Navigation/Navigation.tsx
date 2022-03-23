@@ -2,9 +2,11 @@ import { FC } from 'react';
 
 import Navbar from './Navbar/Navbar';
 
-interface NavigationProps {}
+interface NavigationProps {
+  onToggle: () => void;
+}
 
-const Navigation: FC<NavigationProps> = () => {
+const Navigation: FC<NavigationProps> = ({ onToggle }) => {
   const routes = [
     {
       name: 'Analytics',
@@ -18,7 +20,7 @@ const Navigation: FC<NavigationProps> = () => {
 
   return (
     <>
-      <Navbar routes={routes} />
+      <Navbar onToggle={onToggle} routes={routes} />
     </>
   );
 };

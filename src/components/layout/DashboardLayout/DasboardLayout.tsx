@@ -1,13 +1,7 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Icon,
-  useDisclosure,
-  useMediaQuery,
-} from '@chakra-ui/react';
+import { Box, Flex, useDisclosure, useMediaQuery } from '@chakra-ui/react';
 import React, { FC, ReactNode } from 'react';
-import { FaBars } from 'react-icons/fa';
+
+import Navigation from '~/components/Navigation/Navigation';
 
 import LeftSideDrawer from '../LeftSideDrawer';
 
@@ -18,29 +12,12 @@ interface DashboardLayoutProps {
   text: string;
 }
 
-const DashboardLayout: FC<DashboardLayoutProps> = ({ children, text }) => {
+const DashboardLayout: FC<DashboardLayoutProps> = ({ children }) => {
   const { isOpen, onClose, onToggle } = useDisclosure();
   const [isLessThan786] = useMediaQuery('(max-width: 786px)');
   return (
     <>
-      <Box
-        bg="pink.500"
-        fontWeight="semibold"
-        fontSize="25"
-        p={5}
-        pl={8}
-        display="flex"
-        justifyContent="space-between"
-        color="white"
-        textTransform="uppercase"
-      >
-        <Icon onClick={onToggle}>
-          <FaBars />
-        </Icon>
-        <Heading fontSize="xl" opacity="0.9">
-          {text}
-        </Heading>
-      </Box>
+      <Navigation onToggle={onToggle} />
       <Flex>
         {isLessThan786 ? (
           <LeftSideDrawer onClose={onClose} isOpen={isOpen}>
