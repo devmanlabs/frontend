@@ -71,7 +71,7 @@ const UserSideBar: FC<UserSideBarProps> = ({ onClose, isDrawer = false }) => {
         },
       }}
     >
-      <Box py="2">
+      <Box py="6">
         {/* <Image src={logo} alt="logoImage" height={40} width={200} /> */}
       </Box>
       <>
