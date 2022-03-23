@@ -1,5 +1,12 @@
-import { Box, Flex, useDisclosure, useMediaQuery } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Stack,
+  useDisclosure,
+  useMediaQuery,
+} from '@chakra-ui/react';
 import React, { FC, ReactNode } from 'react';
+import Footer from '~/components/Footer/Footer';
 
 import Navigation from '~/components/Navigation/Navigation';
 
@@ -34,7 +41,10 @@ const DashboardLayout: FC<DashboardLayoutProps> = ({ children }) => {
         )}
 
         <Box flex="1">
-          <Box marginTop={0}> {children}</Box>
+          <Stack>
+            <Box marginTop={0}> {children}</Box>
+            <Footer />
+          </Stack>
         </Box>
       </Flex>
     </>
