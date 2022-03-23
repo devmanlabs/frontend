@@ -6,16 +6,14 @@ import {
   FormLabel,
   Heading,
   HStack,
+  Icon,
   Input,
-  InputGroup,
-  InputRightElement,
   Select,
   Text,
 } from '@chakra-ui/react';
 import { Formik, Form } from 'formik';
 import { FC } from 'react';
-
-import { Card } from '~/components/Card';
+import { AiOutlineQuestionCircle } from 'react-icons/ai';
 interface stakingProps {}
 
 const staking: FC<stakingProps> = () => {
@@ -33,70 +31,89 @@ const staking: FC<stakingProps> = () => {
         }}
       >
         <Form>
-          <Flex mx="auto" justifyContent="center" w="550px">
-            <FormControl w="200px">
-              <FormLabel as="legend" fontSize="sm">
-                Amount to be staked
-              </FormLabel>
-              <HStack boxShadow="md">
-                <Input
-                  borderRadius="none"
-                  borderLeftRadius="md"
-                  focusBorderColor="none"
-                  border="none"
-                  //   value={0}
-                />
-                <HStack px="4">
-                  <Text color="gray.100" fontSize="xs">
-                    USDC
-                  </Text>
-                  <Button
-                    bg="purple.200"
-                    color="white"
-                    size="xs"
-                    borderRadius="full"
-                  >
-                    Max
-                  </Button>
+          <Flex
+            gap="2"
+            align="end"
+            mx="auto"
+            justifyContent="space-between"
+            w="700px"
+          >
+            {' '}
+            <Flex>
+              <FormControl w="200px">
+                <FormLabel as="legend" fontSize="sm">
+                  Amount to be staked
+                </FormLabel>
+                <HStack boxShadow="md">
+                  <Input
+                    borderRadius="none"
+                    borderLeftRadius="md"
+                    focusBorderColor="none"
+                    border="none"
+                    //   value={0}
+                  />
+                  <HStack px="4">
+                    <Text color="gray.100" fontSize="xs">
+                      USDC
+                    </Text>
+                    <Button
+                      bg="purple.200"
+                      color="white"
+                      size="xs"
+                      borderRadius="full"
+                    >
+                      Max
+                    </Button>
+                  </HStack>
                 </HStack>
-              </HStack>
-            </FormControl>
-            <FormControl w="150px">
-              <FormLabel as="legend" fontSize="sm">
-                Value in CMK
-              </FormLabel>
-              <HStack boxShadow="md">
-                <Input
-                  borderRadius="none"
-                  borderLeftRadius="md"
-                  focusBorderColor="none"
-                  border="none"
-                  //   value={0}
-                  w="150px"
-                />
+              </FormControl>
+              <FormControl w="150px">
+                <FormLabel as="legend" fontSize="sm">
+                  Value in CMK
+                </FormLabel>
+                <HStack boxShadow="md">
+                  <Input
+                    borderRadius="none"
+                    borderLeftRadius="md"
+                    focusBorderColor="none"
+                    border="none"
+                    //   value={0}
+                    w="150px"
+                  />
 
-                <Text px="4" color="gray.100" fontSize="xs">
-                  CMK
-                </Text>
-              </HStack>
-            </FormControl>
-            <FormControl w="150px">
-              <FormLabel as="legend" fontSize="sm">
-                Token
-              </FormLabel>
-              <HStack boxShadow="md">
-                <Select
-                  borderRadius="none"
-                  borderLeftRadius="md"
-                  focusBorderColor="none"
-                  border="none"
-                >
-                  <option value="option1">USDC</option>
-                  <option value="option2">ETH</option>
-                  <option value="option3">ETH</option>
-                </Select>
-              </HStack>
-            </FormControl>
+                  <Text px="4" color="gray.100" fontSize="xs">
+                    CMK
+                  </Text>
+                </HStack>
+              </FormControl>
+              <FormControl w="150px">
+                <FormLabel as="legend" fontSize="sm">
+                  Token
+                </FormLabel>
+                <HStack boxShadow="md">
+                  <Select
+                    borderRadius="none"
+                    borderLeftRadius="md"
+                    focusBorderColor="none"
+                    border="none"
+                  >
+                    <option value="option1">USDC</option>
+                    <option value="option2">ETH</option>
+                    <option value="option3">ETH</option>
+                  </Select>
+                </HStack>
+              </FormControl>
+            </Flex>
+            <HStack>
+              {' '}
+              <Button minW="200px" bg="rgba(0,0,0,0.1)">
+                Mint NFT
+              </Button>
+              <Icon color="purple.300" fontSize="xl">
+                {' '}
+                <AiOutlineQuestionCircle />
+              </Icon>
+            </HStack>
           </Flex>
         </Form>
       </Formik>
