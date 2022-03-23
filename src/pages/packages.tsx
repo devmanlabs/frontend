@@ -1,6 +1,8 @@
 import { Container, Grid, Heading, Text, VStack } from '@chakra-ui/react';
+import { ReactElement } from 'react';
 import { BsCurrencyDollar } from 'react-icons/bs';
 
+import DashboardLayout from '~/components/layout/DashboardLayout/DasboardLayout';
 import PackageCard from '~/components/PackageCard';
 const packages = () => {
   const packagesList = [
@@ -157,3 +159,6 @@ const packages = () => {
 };
 
 export default packages;
+packages.getLayout = function getLayout(page: ReactElement) {
+  return <DashboardLayout text="Dashboard">{page}</DashboardLayout>;
+};

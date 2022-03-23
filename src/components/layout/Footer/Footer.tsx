@@ -19,7 +19,7 @@ import {
   FaYoutube,
 } from 'react-icons/fa';
 
-import Logo from '../Logo/Logo';
+import Logo from '../../Logo/Logo';
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (

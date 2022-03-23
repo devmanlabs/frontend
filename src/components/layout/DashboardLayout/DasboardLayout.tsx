@@ -6,9 +6,9 @@ import {
   useMediaQuery,
 } from '@chakra-ui/react';
 import React, { FC, ReactNode } from 'react';
-import Footer from '~/components/Footer/Footer';
 
-import Navigation from '~/components/Navigation/Navigation';
+import Footer from '~/components/layout/Footer/Footer';
+import Navigation from '~/components/layout/Navigation/Navigation';
 
 import LeftSideDrawer from '../LeftSideDrawer';
 
