@@ -2,7 +2,8 @@ import { Flex, Icon, Stack, Text, Box } from '@chakra-ui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { FC } from 'react';
-import { FaCog, FaRegEdit, FaSignOutAlt } from 'react-icons/fa';
+
+import { adminRoutes } from '~/constants/adminRoutes';
 
 import SidebarMenu from './SidebarMenu';
 interface UserSideBarProps {
@@ -11,46 +12,6 @@ interface UserSideBarProps {
 }
 const UserSideBar: FC<UserSideBarProps> = ({ onClose, isDrawer = false }) => {
   const router = useRouter();
-  const items = [
-    {
-      icon: <FaRegEdit />,
-      text: 'Admin Management',
-      link: '/',
-    },
-
-    {
-      icon: <FaCog />,
-      text: 'Settings',
-      link: '/404',
-      more: [
-        {
-          icon: <FaCog />,
-          text: 'Change Password',
-          link: '/settings',
-        },
-        {
-          icon: <FaCog />,
-          text: 'Delete Account',
-          link: '/settings/delete-account',
-        },
-        {
-          icon: <FaCog />,
-          text: 'Notification Settings',
-          link: '/settings/notification-settings',
-        },
-        {
-          icon: <FaCog />,
-          text: '2FA',
-          link: '/settings/two-factor-authentication',
-        },
-      ],
-    },
-    {
-      icon: <FaSignOutAlt />,
-      text: 'Logout',
-      link: '/patient-dashboard/logout',
-    },
-  ];
 
   return (
     <Stack
@@ -76,7 +37,7 @@ const UserSideBar: FC<UserSideBarProps> = ({ onClose, isDrawer = false }) => {
       </Box>
       <>
         {' '}
-        {items.map((item, i) => {
+        {adminRoutes.map((item, i) => {
           if (item.more !== undefined) {
             return (
               <SidebarMenu
