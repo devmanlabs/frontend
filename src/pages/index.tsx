@@ -1,4 +1,4 @@
-import { Flex, Grid, GridItem, Stack, Text } from '@chakra-ui/react';
+import { Button, Flex, Grid, GridItem, Stack, Text } from '@chakra-ui/react';
 
 import { Card } from '~/components/Card';
 import BalanceCard from '~/components/Home/BalanceCard';
@@ -52,6 +52,16 @@ const Home = () => {
               as={Card}
             >
               <LineChartPreview />
+            </GridItem>
+            <GridItem
+              colStart={{ sm: 7, lg: 8 }}
+              colEnd={{ sm: 9, lg: 10 }}
+              display="flex"
+              justifyContent="center"
+            >
+              <Button colorScheme="pink" w="full" mx="2">
+                Mint New Key
+              </Button>
             </GridItem>
           </Grid>
           <Grid placeItems="center" as="nav" height="80px" bg="gray.100">
