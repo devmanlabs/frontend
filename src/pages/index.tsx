@@ -45,10 +45,13 @@ const Home = () => {
             <GridItem colSpan={{ sm: 3, lg: 2 }} rowSpan={{ sm: 4, lg: 5 }}>
               <MembershipDetailsCard />
             </GridItem>
-            <GridItem colSpan={{ sm: 5, lg: 7 }} rowSpan={{ sm: 4, lg: 5 }}>
-              <Card w="99%">
-                <LineChartPreview />
-              </Card>
+            <GridItem
+              w="99%"
+              colSpan={{ sm: 5, lg: 7 }}
+              rowSpan={{ sm: 4, lg: 5 }}
+              as={Card}
+            >
+              <LineChartPreview />
             </GridItem>
           </Grid>
           <Grid placeItems="center" as="nav" height="80px" bg="gray.100">

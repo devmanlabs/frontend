@@ -154,7 +154,7 @@ const LineChartPreview = () => {
 
   return (
     <>
-      <Container maxW={zoom ? '100%' : 'container.xl'}>
+      <Container maxW={zoom ? '100%' : 'container.xl'} p={0}>
         <DataSetSwitcher
           dataSetHandler={dataSetHandler}
           dataSetsStored={dataSetsStored}
@@ -165,12 +165,7 @@ const LineChartPreview = () => {
             downloadData={() => convertDataToJsonFromObject(data)}
             toggleZoom={toggleZoom}
           />
-          <Stack
-            spacing={0}
-            boxShadow="md"
-            borderBottomRadius="md"
-            border="1px solid #000"
-          >
+          <Stack spacing={0}>
             <IntervalToggler
               changeIntervalHandler={changeIntervalHandler}
               dayInterval={dayInterval}

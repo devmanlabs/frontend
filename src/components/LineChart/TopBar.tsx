@@ -14,13 +14,7 @@ interface TopBarProps {
 
 const TopBar: FC<TopBarProps> = ({ downloadData, toggleZoom }) => {
   return (
-    <Flex
-      borderTopRadius="md"
-      p="2"
-      bg="gray.100"
-      justify="space-between"
-      border="1px solid #000"
-    >
+    <Flex borderTopRadius="md" p="2" bg="gray.100" justify="space-between">
       <Heading fontSize={{ base: 'md', sm: 'lg' }}>
         Liquidty Coverage Ratio (LCR)
       </Heading>
