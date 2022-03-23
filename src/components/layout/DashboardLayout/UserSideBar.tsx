@@ -64,7 +64,7 @@ const UserSideBar: FC<UserSideBarProps> = ({ onClose, isDrawer = false }) => {
                       ? '5px solid red !important'
                       : ''
                   }
-                  color="white"
+                  color={router.asPath === item.link ? 'white' : 'black'}
                   onClick={onClose}
                 >
                   <Icon fontSize="xl" mr="2">
